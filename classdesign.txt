@@ -1,0 +1,8 @@
+Class Design
+------------
+Text Menu - TextMenu class
+Button menu - ButtonMenu class
+Aside/Expandable Menus - SideMenu class
+Content area - ContentMenu class
+User info - UserInfoMenu class
+Container Class

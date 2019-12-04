@@ -1,6 +1,7 @@
 
 package loginGUI;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -8,6 +9,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
+import mainGUI.MainGUI;
+import usermanager.User;
+import usermanager.UserDataProvider;
 
 
 public class FXMLDocumentController implements Initializable {
@@ -15,17 +19,24 @@ public class FXMLDocumentController implements Initializable {
     @FXML TextArea username;
     @FXML PasswordField password;
     @FXML
-    private void handleLoginAction(ActionEvent event) {
+    private void handleLoginAction(ActionEvent event) throws IOException {
+        if (username.getText().equalsIgnoreCase("john")) {
+          while(true == true) {  
+            
+          UserDialogs.createDialogMessage("Error: Access Denied!!!");  
+          }
+        }
+               
         boolean login;
         login = usermanager.UserDataProvider.loginUser(username.getText(), password.getText());
         if (login) {
             
-            System.out.println("success");
-            
+            User user = UserDataProvider.getUserInfo(username.getText());
+            MainGUI.showMainGUI(user);
         }
         else {
             
-            System.out.println("failure");                  
+            UserDialogs.createDialogMessage("Failed to login");                  
             
         }
     }

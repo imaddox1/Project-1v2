@@ -3,13 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Java/project/PROJECT/src/usermanager/User.java</file>
-            <file>file:/D:/Java/project/PROJECT/src/guitest/UserDialogs.java</file>
-            <file>file:/D:/Java/project/PROJECT/src/guitest/FXMLDocumentController.java</file>
-            <file>file:/D:/Java/project/PROJECT/src/guitest/Guitest.java</file>
-            <file>file:/D:/Java/project/PROJECT/src/guitest/FXMLDocument.fxml</file>
-            <file>file:/D:/Java/project/PROJECT/src/usermanager/UserUtil.java</file>
-            <file>file:/D:/Java/project/PROJECT/src/usermanager/UserDataProvider.java</file>
+            <file>file:/D:/Java/project/PROJECT/src/mainGUI/LoginGUI.java</file>
+            <file>file:/D:/Java/project/PROJECT/src/mainGUI/FXMLDocumentController.java</file>
+            <file>file:/D:/Java/project/PROJECT/src/loginGUI/mainGUI.java</file>
+            <file>file:/D:/Java/project/PROJECT/src/loginGUI/UserDialogs.java</file>
         </group>
     </open-files>
 </project-private>

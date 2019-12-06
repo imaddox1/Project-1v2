@@ -6,5 +6,8 @@
 * Nishant Pradhan - Coder
 * Noah Carlton- Coder
 
+* IDE: NetBeans 8.2
+* JDK 9
+
 ![UI Class Design](aqfgwardawgaawfazwcds.png)
 

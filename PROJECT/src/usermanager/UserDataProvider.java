@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.NoSuchElementException;
 import javax.swing.JOptionPane;
 
 
@@ -32,6 +33,8 @@ public final class UserDataProvider {
                {
                    
                    userInfo.createNewFile();
+                   JOptionPane.showMessageDialog(null, "New File Created: user info is Admin/Admin");
+                   UserUtil.createNewUser("Admin","Admin","Admin");
                    
                }
             }
@@ -40,6 +43,9 @@ public final class UserDataProvider {
 
         catch (IOException ex) {
 
+            ex.printStackTrace();
+            
+            UserDialogs.createDialogMessage("IOException error!");
         }
         return userInfo;
     } 
@@ -54,6 +60,10 @@ public final class UserDataProvider {
            
        }
        catch(IOException e) {
+           
+           e.printStackTrace();
+            
+           UserDialogs.createDialogMessage("IOException error!");
            
        }
         return br;
@@ -85,6 +95,11 @@ public final class UserDataProvider {
            
        }
        catch(IOException e) {
+           
+           e.printStackTrace();
+            
+           UserDialogs.createDialogMessage("IOException error!");
+           
            
        }
        
@@ -120,6 +135,18 @@ public final class UserDataProvider {
         }
         catch(IOException e) {
             
+            
+           e.printStackTrace();
+            
+           UserDialogs.createDialogMessage("IOException error!");
+           
+       
+        }
+        catch(NoSuchElementException ex) {
+            
+            UserDialogs.createDialogMessage("Text file contains bad characters.");
+            
+            
         }
         
         return loginSuccessful;
@@ -143,6 +170,10 @@ public final class UserDataProvider {
            
        }
        catch (IOException e) {
+           
+           e.printStackTrace();
+            
+           UserDialogs.createDialogMessage("IOException error!");
            
            
        }
@@ -195,8 +226,10 @@ public final class UserDataProvider {
         }
         catch (IOException e) {
             
+        e.printStackTrace();
             
-            
+        UserDialogs.createDialogMessage("IOException error!");
+                                 
         }
         
         return searchUser;
@@ -251,8 +284,11 @@ public final class UserDataProvider {
             
         }
         catch(IOException e) {
+        
+        e.printStackTrace();
             
-            
+        UserDialogs.createDialogMessage("IOException error!");
+                              
         }
         finally {
             
